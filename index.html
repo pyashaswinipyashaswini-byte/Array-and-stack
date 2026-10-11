@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureCore | Arrays & Stacks</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header><div class="brand">SECURECORE <span>ACCESS CONTROL</span></div><span class="tag">MODULE 01</span></header>
+<main>
+  <section class="intro">
+    <p class="eyebrow">RESEARCH FACILITY / SECURITY CONSOLE</p>
+    <h1>Access Management</h1>
+    <p>Manage researcher records using arrays and track security actions using a stack.</p>
+  </section>
+  <section class="stats">
+    <article><span>RESEARCHERS</span><h2 id="count">3 / 5</h2></article>
+    <article><span>STACK ACTIONS</span><h2 id="stackCount">0</h2></article>
+    <article><span>STORAGE</span><h2 id="storage">60%</h2></article>
+  </section>
+  <section class="panel">
+    <h2>Researcher Registry <span class="sub">Fixed capacity: 5</span></h2>
+    <form id="addForm">
+      <input id="rid" placeholder="Researcher ID (e.g. R104)" required>
+      <input id="rname" placeholder="Full name" required>
+      <select id="zone"><option>Lab A</option><option>Lab B</option><option>Lab C</option></select>
+      <button>Add researcher</button>
+    </form>
+    <div class="tablewrap"><table><thead><tr><th>ID</th><th>Researcher</th><th>Zone</th><th>Action</th></tr></thead><tbody id="records"></tbody></table></div>
+    <p id="arrayMessage" class="message">Array initialized with sample records.</p>
+  </section>
+  <section class="panel">
+    <h2>Security Action Stack <span class="sub">LIFO</span></h2>
+    <div class="actions"><input id="actionText" placeholder="Enter security action"><button id="push">Push action</button><button id="pop" class="secondary">Pop latest</button></div>
+    <div id="stack" class="stack"></div>
+    <p id="stackMessage" class="message">Latest action appears at the top.</p>
+  </section>
+  <section class="notice"><strong>Limitation:</strong> The array cannot exceed five records. Removing a record shifts later entries. The stack removes the newest action first, not the oldest.</section>
+</main>
+<footer>SECURECORE · ACCESS VERIFICATION SIMULATION</footer>
+</body>
+</html>
